@@ -1,0 +1,14 @@
+{
+  "files": {
+    "index.js": "e7039d27da9298f300b52621d6fcb35b4de4ea165ceb616ba619ef496bac432f",
+    "config.js": "52a1a4c9561f2213df686c6eb983a9d6fc6a850aa03e98eb3d55233398fe4b16",
+    "module.json": "c75a1fcafaee2fe3750e2a1a4c460dfc8d0891315023d48a1037afecb7115bd6"
+  },
+  "defs": {
+    "S_BOSS_GAGE_INFO": 3,
+    "S_ACTION_STAGE": 9,
+    "S_DUNGEON_EVENT_MESSAGE": 2,
+    "S_SPAWN_COLLECTION": 4,
+    "S_DESPAWN_COLLECTION": 2
+  }
+}

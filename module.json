@@ -1,0 +1,7 @@
+{
+  "name": "Drakoon Arena Guide",
+  "author": "Neko-Hime",
+  "description": "Guide for Drakoon Arena",
+  "servers": ["https://raw.githubusercontent.com/Neko-Hime/drakoon-arena-guide/master/"],
+  "version": "1.0"
+}
