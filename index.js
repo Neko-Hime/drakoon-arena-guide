@@ -2,6 +2,8 @@ const Vec3 = require('tera-vec3');
 
 const {
     EVENT_MESSAGE_TYPE,
+    DEFAULT_TEXT_COLOR,
+    TEXT_COLORS,
     DUNGEONS
 } = require('./config');
 
@@ -39,12 +41,20 @@ module.exports = function DungeonsGuide(mod) {
         if (!msg) return;
 
         if (Number(timeout) == 0) {
-            sendMessage(EVENT_MESSAGE_TYPE, msg);
+            sendMessage(EVENT_MESSAGE_TYPE, prepareMessage(msg));
         } else if (Number(timeout) > 0) {
             mod.setTimeout(() => {
-                sendMessage(EVENT_MESSAGE_TYPE, msg);
+                sendMessage(EVENT_MESSAGE_TYPE, prepareMessage(msg));
             }, timeout);
         }
+    }
+
+    function prepareMessage (msg) {
+        msg = msg.replace(/\[color="(\w+)"]/g, function(match, color){
+            return `<font color="#${getRGBColor(color)}">`;
+        });
+        msg = msg.replace(/\[\/color]/g, '</font>');
+        return `<font size="24" color="#${DEFAULT_TEXT_COLOR}">${msg}</font>`;
     }
 
     function sendMessage (type, msg) {
@@ -54,6 +64,21 @@ module.exports = function DungeonsGuide(mod) {
             channel: 0,
             message: msg
         });
+    }
+
+    function getRGBColor (color) {
+        switch (color) {
+            case 'red':
+                return TEXT_COLORS.red;
+            case 'green':
+                return TEXT_COLORS.green;
+            case 'blue':
+                return TEXT_COLORS.blue;
+            case 'purple':
+                return TEXT_COLORS.purple;
+            default:
+                return DEFAULT_TEXT_COLOR;
+        }
     }
 
     function spawnsItems (spawns) {
