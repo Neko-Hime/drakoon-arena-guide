@@ -8,7 +8,7 @@ module.exports = {
         purple: '800080'
     },
     DUNGEONS: [
-        {zoneName: 'DA', zoneID: [3102], bosses: {
+        {zoneName: 'DA', zoneID: [2105, 3102], bosses: {
                 1000: [
                     {id: 101, msg: 'Double Slash', spawns: [], timeout: 0},
                     {id: 103, msg: 'Double Slash into Cross Slash', spawns: [], timeout: 0},

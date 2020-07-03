@@ -1,8 +1,8 @@
 {
   "files": {
     "index.js": "20ed2648c4589c9b00ce27b4088ccd7fa38f80415f2e8a984ce8ce947dad0bcf",
-    "config.js": "cfbecb8774f951250fee282c48a9a6f7912f23746f614e4a5d7f44642fa856d3",
-    "module.json": "b51dbf497f82dda4ed26d2e311619545d147ac4e100255cdcc59967cd2786237"
+    "config.js": "6bc8499afe595e464f9442ab163f12c3ec2677c5387701c0b694c1e9c49b8c73",
+    "module.json": "500650dc0d7b2a6ebe7046738a67c346074469f2ce4d6710b4ae7947b1d5c852"
   },
   "defs": {
     "S_BOSS_GAGE_INFO": 3,
